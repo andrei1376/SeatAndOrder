@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='SeatAndOrderTests.xctest' tests='2' failures='0'>
+  <testsuite name='SeatAndOrderTests.SeatAndOrderTests' tests='2' failures='0'>
+    <testcase classname='SeatAndOrderTests.SeatAndOrderTests' name='testExample' time='0.002'/>
+    <testcase classname='SeatAndOrderTests.SeatAndOrderTests' name='testPerformanceExample' time='0.481'/>
+  </testsuite>
+</testsuites>
