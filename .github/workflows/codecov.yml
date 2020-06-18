@@ -14,7 +14,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     strategy:
         matrix:
-          destination: ['platform=iOS Simulator,OS=12.2,name=iPhone X']
+          destination: ['platform=iOS Simulator,OS=13.5,name=iPhone 11']
     steps:
       - name: Checkout
         uses: actions/checkout@master
