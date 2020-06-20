@@ -14,7 +14,4 @@ parsers:
       method: no
       macro: no
 
-comment:
-  layout: "diff,flags,tree"
-  behavior: new
-  require_changes: no
+comment: false
