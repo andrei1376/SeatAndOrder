@@ -1,0 +1,5 @@
+coverage_service: cobertura_xml
+xcodeproj: SeatAndOrder.xcodeproj
+scheme: SeatAndOrder
+workspace: SeatAndOrder.xcworkspace
+output_directory: fastlane/slather_output
