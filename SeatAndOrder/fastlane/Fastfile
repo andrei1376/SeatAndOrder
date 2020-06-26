@@ -18,15 +18,17 @@ default_platform(:ios)
 platform :ios do
   desc "Unit tests"
   lane :unit_tests do
-  run_tests(scheme: "SeatAndOrder")
-  
-  xcov(workspace: "SeatAndOrder.xcworkspace",
-  		scheme: "SeatAndOrder",
-  		output_directory: "xcov_output")
-
-  danger(danger_id: "unit-tests",
-  		dangerfile: "fastlane/DangerFile",
-  		github_api_token: ENV["a546ed4ddfdfae79c7151b3a771753f9fbfa7e82"],
-  		verbose: true)  
+    begin
+      scan(
+        scheme:"SeatAndOrder",
+        workspace:"SeatAndOrder.xcworkspace",
+        code_coverage:true,
+        clean:true,
+        output_directory:"fastlane/test_output"
+      )
+      slather
+      codecov_sh = "curl -s https://codecov.io/bash -t 3cf6b7b1-5413-4a3b-838a-41cfa25ba870 -f fastlane/slather_output -X coveragepy -X gcov -X xcode || 'Rompimo todo'"
+      sh codecov_sh
+    end
   end
 end
